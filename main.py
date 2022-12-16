@@ -16,8 +16,9 @@ if __name__ == '__main__':
                 running = False
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 for i in range(10):
+                    color = ['yellow', 'black', 'green', 'magenta', 'red', 'blue']
                     coords = (random.randint(0, 800), random.randint(0, 800))
                     radius = random.randint(0, 200)
-                    pygame.draw.circle(screen, pygame.Color('yellow'), coords, radius)
+                    pygame.draw.circle(screen, pygame.Color(random.choice(color)), coords, radius)
         pygame.display.flip()
     pygame.quit()
